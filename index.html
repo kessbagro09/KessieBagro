@@ -10,8 +10,8 @@
             margin: 0;
             padding: 0;
             scroll-behavior: smooth;
-            background-color: #f5f5f5;
-            color: #333;
+            background-color: #E7CCB3; /* Secondary color */
+            color: #3D2713; /* Dark text for readability */
         }
 
         header {
@@ -20,8 +20,8 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #1f2937;
-            color: white;
+            background-color: #3D2713; /* Primary color */
+            color: #FFFFFF;
             text-align: center;
             padding: 0 20px;
         }
@@ -39,16 +39,16 @@
         header button {
             padding: 12px 24px;
             font-size: 1rem;
-            background-color: #3b82f6;
+            background-color: #C6854A; /* Accent color */
             border: none;
             border-radius: 6px;
             cursor: pointer;
-            color: white;
+            color: #FFFFFF;
             transition: background-color 0.3s;
         }
 
         header button:hover {
-            background-color: #2563eb;
+            background-color: #A56936;
         }
 
         header img {
@@ -57,19 +57,23 @@
             width: 150px;
             height: 150px;
             object-fit: cover;
+            border: 3px solid #C6854A;
         }
 
         section {
             padding: 80px 20px;
             max-width: 1000px;
             margin: auto;
+            background-color: #E7CCB3; /* Secondary color */
+            border-radius: 8px;
+            margin-bottom: 40px;
         }
 
         section h2 {
             font-size: 2rem;
             margin-bottom: 20px;
             text-align: center;
-            color: #1f2937;
+            color: #3D2713; /* Primary color for headings */
         }
 
         .about p {
@@ -86,35 +90,41 @@
         }
 
         .skills span {
-            background-color: #3b82f6;
-            color: white;
+            background-color: #C6854A; /* Accent color */
+            color: #FFFFFF;
             padding: 6px 12px;
             border-radius: 4px;
             font-size: 0.9rem;
         }
 
         .portfolio-item {
-            background-color: white;
+            background-color: #3D2713; /* Primary color */
+            color: #FFFFFF;
             padding: 20px;
             border-radius: 8px;
             margin-bottom: 20px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .portfolio-item:hover {
+            transform: translateY(-5px);
+            background-color: #C6854A; /* Accent on hover */
         }
 
         .contact a {
             display: inline-block;
             margin: 5px 10px;
-            color: #3b82f6;
+            color: #C6854A; /* Accent color */
             text-decoration: none;
         }
 
         footer {
             text-align: center;
             padding: 40px 20px;
-            background-color: #1f2937;
-            color: white;
+            background-color: #3D2713; /* Primary color */
+            color: #FFFFFF;
         }
-
     </style>
 </head>
 <body>
@@ -123,8 +133,7 @@
     <header>
         <h1>Kessie Bagro</h1>
         <p>Finance & Analytics Professional | AI-Powered Automation</p>
-        <button onclick="document.getElementById('portfolio').scrollIntoView()">View My Work</button>
-        <!-- Professional Photo -->
+        <button onclick="document.getElementById('portfolio').scrollIntoView({behavior:'smooth'})">View My Work</button>
         <img src="photo.jpeg" alt="Kessie Bagro">
     </header>
 
@@ -152,7 +161,6 @@
     <!-- Portfolio / Projects -->
     <section class="portfolio" id="portfolio">
         <h2>Portfolio / Projects</h2>
-        <!-- Placeholder items -->
         <div class="portfolio-item">
             <h3>Project Title</h3>
             <p>Description of the project will go here. Tools used, outcomes, etc.</p>
@@ -161,17 +169,16 @@
             <h3>Project Title</h3>
             <p>Description of the project will go here. Tools used, outcomes, etc.</p>
         </div>
-        <!-- Add more projects as needed -->
     </section>
 
     <!-- Resume / CV -->
     <section class="resume" id="resume">
         <h2>Resume / CV</h2>
         <p>Brief web summary of role, achievements, and skills.</p>
-        <a href="resume" download>Download PDF Resume</a>
+        <a href="resume.pdf" download>Download PDF Resume</a>
     </section>
 
-    
+    <!-- Contact -->
     <section class="contact" id="contact">
         <h2>Contact</h2>
         <p>Email: <a href="mailto:kessbagro09@gmail.com">kessbagro09@gmail.com</a></p>
@@ -184,5 +191,3 @@
 
 </body>
 </html>
-
-
