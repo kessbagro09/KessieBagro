@@ -12,8 +12,8 @@
       margin: 0;
       padding: 0;
       scroll-behavior: smooth;
-      background-color: #E7CCB3; /* Nude background */
-      color: #000000; /* Black text */
+      background-color: #E7CCB3;
+      color: #000000;
     }
 
     /* Sticky Navigation */
@@ -48,8 +48,8 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #000000; /* Black background */
-      color: #E7CCB3; /* Nude text */
+      background-color: #000000;
+      color: #E7CCB3;
       text-align: center;
       padding: 0 20px;
     }
@@ -63,14 +63,14 @@
     header p {
       font-size: 1.4rem;
       margin: 15px 0 25px;
-      color: #C6854A; /* Accent brown */
+      color: #C6854A;
       font-weight: 500;
     }
 
     header button {
       padding: 14px 28px;
       font-size: 1rem;
-      background-color: #C6854A; /* Accent */
+      background-color: #C6854A;
       border: none;
       border-radius: 30px;
       cursor: pointer;
@@ -112,7 +112,7 @@
     }
 
     section h2 i {
-      color: #C6854A; /* Accent color for icons */
+      color: #C6854A;
       font-size: 1.8rem;
     }
 
@@ -122,10 +122,35 @@
       font-size: 1.05rem;
     }
 
-    /* Skills grid - 2 rows x 6 columns */
+    /* Experience */
+    .experience-item {
+      background-color: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .experience-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .experience-item h3 {
+      margin: 0 0 5px 0;
+      color: #000000;
+    }
+
+    .experience-item p {
+      margin: 5px 0 10px 0;
+      line-height: 1.6;
+    }
+
+    /* Skills grid */
     .skills div {
       display: grid;
-      grid-template-columns: repeat(6, 1fr); /* 6 columns */
+      grid-template-columns: repeat(6, 1fr);
       grid-auto-rows: auto; 
       gap: 14px;
       margin-top: 25px;
@@ -216,6 +241,7 @@
   <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
+    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#portfolio">Portfolio</a>
     <a href="#resume">Resume</a>
@@ -240,6 +266,41 @@
     <p>Beyond finance, I am curious and open to learning how <strong>AI and process automation</strong> can be applied in other fields such as <strong>social media management or marketing</strong>. I believe finance provides an excellent foundation for innovation, and I’m excited to keep growing my skills — not only as a finance professional, but as someone committed to building <strong>smarter, more efficient ways of working across industries</strong>.</p>
 
     <p>On the other hand, I am also passionate about <strong>volunteering and corporate social responsibility (CSR)</strong>. I believe that giving back, building relationships in the community, and reaching out to those in need are just as important as professional success. In 2022, I was recognized as a <strong>Social Impact Champion</strong> for my involvement in volunteering activities — an experience that continues to inspire me to balance career growth with making a meaningful difference beyond the workplace.</p>
+  </section>
+
+  <!-- Experience -->
+  <section class="experience" id="experience">
+    <h2><i class="fas fa-briefcase"></i> Experience</h2>
+
+    <div class="experience-item">
+      <h3>Senior Finance Business Advisor III - Oceania</h3>
+      <p><strong>Ernst & Young Global Delivery Services Phils. Inc.</strong> | <em>Mar 2020 – Present</em></p>
+      <p>Leading pricing, budgeting, revenue adjustment, and margin analysis for Oceania, serving various stakeholders (Partners, Executive Directors, Senior Managers). Championing AI-driven automation and process improvement initiatives to save time and reduce costs.</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Markets Finance Support Analyst - APAC (Secondment)</h3>
+      <p><strong>Ernst & Young Global Delivery Services Phils. Inc.</strong> | <em>Dec 2023 – Apr 2024</em></p>
+      <p>Supported APAC leaders with revenue analysis, market trend tracking, and ad-hoc reporting for multiple clients and internal stakeholders.</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Financial Management Associate - APAC & Global</h3>
+      <p><strong>Ernst & Young Philippines</strong> | <em>Jan 2016 – Sep 2017</em></p>
+      <p>Worked on variance analysis, billing, revenue reports, and financial dashboards across APAC & Global engagements. Built a strong foundation in financial management and analytics.</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Accounting Assistant</h3>
+      <p><strong>SyCip Salazar Hernandez & Gatmaitan Law Offices</strong> | <em>Dec 2017 – Feb 2020</em></p>
+      <p>Managed AP, bank reconciliations, journal entries, and partner-related transactions. Developed attention to detail and accuracy in financial reporting.</p>
+    </div>
+
+    <div class="experience-item">
+      <h3>Online English Teacher</h3>
+      <p><strong>Freelance / Part-time</strong> | <em>Sep 2017 – Nov 2017</em></p>
+      <p>Taught Asian students (Japan, Korea, Thailand), improving communication skills and cross-cultural collaboration abilities.</p>
+    </div>
   </section>
 
   <!-- Skills -->
