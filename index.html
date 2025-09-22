@@ -96,12 +96,14 @@
       font-size: 1.05rem;
     }
 
-    .skills {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: left;
+    /* Skills grid - 2 rows x 6 columns */
+    .skills div {
+      display: grid;
+      grid-template-columns: repeat(6, 1fr); /* 6 columns */
+      grid-auto-rows: auto; 
       gap: 14px;
       margin-top: 25px;
+      justify-items: start;
     }
 
     .skills span {
@@ -111,7 +113,7 @@
       border-radius: 25px;
       font-size: 0.95rem;
       display: flex;
-      align-items: left;
+      align-items: center;
       gap: 8px;
       transition: all 0.3s ease;
     }
@@ -128,7 +130,7 @@
 
     .skills span:hover i {
       color: #FFFFFF;
-      transform: translateY(-3px); /* bounce effect */
+      transform: translateY(-3px);
     }
 
     .portfolio-item {
@@ -189,7 +191,6 @@
     <h1>Kessie Bagro</h1>
     <p>Finance & Analytics Professional | AI-Powered Automation</p>
     <button onclick="document.getElementById('about').scrollIntoView()">Learn More</button>
-    <!-- Professional Photo -->
     <img src="photo.jpeg" alt="Kessie Bagro">
   </header>
 
@@ -256,4 +257,3 @@
 
 </body>
 </html>
-
