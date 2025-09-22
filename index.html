@@ -6,6 +6,7 @@
 <title>Kessie Bagro | Finance & Analytics Professional</title>
 <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
 <style>
+/* General */
 body {
     font-family: 'Merriweather', serif;
     margin: 0;
@@ -44,7 +45,7 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #000000; /* Black primary */
+    background-color: #000000; /* Black */
     color: #FFFFFF;
     text-align: center;
     padding: 0 20px;
@@ -97,14 +98,17 @@ section.visible {
     transform: translateY(0);
 }
 section h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
     font-size: 2rem;
     margin-bottom: 20px;
-    text-align: center;
-    color: #000000; /* Black headings */
+    color: #000000;
+    transition: color 0.3s;
 }
-.about p {
-    line-height: 1.7;
-    margin-bottom: 15px;
+section h2:hover {
+    color: #E09F3E; /* Amber hover for icons/text */
 }
 
 /* Skills */
@@ -135,11 +139,11 @@ section h2 {
     border-radius: 8px;
     margin-bottom: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-    transition: transform 0.2s, background-color 0.2s;
+    transition: transform 0.2s, background-color 0.2s, color 0.2s;
 }
 .portfolio-item:hover {
     transform: translateY(-5px);
-    background-color: #E09F3E; /* Amber on hover */
+    background-color: #E09F3E; /* Amber hover */
     color: #000000;
 }
 
@@ -168,10 +172,10 @@ footer {
 
 <!-- Navigation -->
 <nav>
-    <a href="#about">About</a>
-    <a href="#portfolio">Portfolio</a>
-    <a href="#resume">Resume</a>
-    <a href="#contact">Contact</a>
+    <a href="#about">👤 About</a>
+    <a href="#portfolio">📁 Portfolio</a>
+    <a href="#resume">📄 Resume</a>
+    <a href="#contact">✉️ Contact</a>
 </nav>
 
 <header>
@@ -181,8 +185,9 @@ footer {
     <img src="photo.jpeg" alt="Kessie Bagro">
 </header>
 
+<!-- About -->
 <section class="about" id="about">
-    <h2>About Me</h2>
+    <h2>👤 About</h2>
     <p>Trusted Finance Business Advisor with 9+ years of experience in financial management, analysis, reporting, business partnering, and financial advisory across APAC and Oceania. Proven track record in budgeting, forecasting, revenue recognition, and working capital optimization within global organizations.</p>
     <p>Skilled at translating complex financial data into actionable insights that support C-suite decision-making. Recognized for leading challenging projects and initiatives, with a strong focus on process improvement and <strong>AI-driven automation within finance</strong>; keen to continually enhance these capabilities and explore innovative ways to drive efficiency and business impact.</p>
     <div class="skills">
@@ -200,8 +205,9 @@ footer {
     </div>
 </section>
 
+<!-- Portfolio -->
 <section class="portfolio" id="portfolio">
-    <h2>Portfolio / Projects</h2>
+    <h2>📁 Portfolio / Projects</h2>
     <div class="portfolio-item">
         <h3>Project Title</h3>
         <p>Description of the project will go here. Tools used, outcomes, etc.</p>
@@ -212,14 +218,16 @@ footer {
     </div>
 </section>
 
+<!-- Resume -->
 <section class="resume" id="resume">
-    <h2>Resume / CV</h2>
+    <h2>📄 Resume / CV</h2>
     <p>Brief web summary of role, achievements, and skills.</p>
     <a href="resume.pdf" download>Download PDF Resume</a>
 </section>
 
+<!-- Contact -->
 <section class="contact" id="contact">
-    <h2>Contact</h2>
+    <h2>✉️ Contact</h2>
     <p>Email: <a href="mailto:kessbagro09@gmail.com">kessbagro09@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/kessie-bagro" target="_blank">linkedin.com/in/kessie-bagro</a></p>
 </section>
