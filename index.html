@@ -16,6 +16,32 @@
       color: #000000; /* Black text */
     }
 
+    /* Sticky Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background-color: #000000;
+      color: #E7CCB3;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 25px;
+      padding: 15px 0;
+      z-index: 1000;
+      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+    }
+
+    nav a {
+      color: #E7CCB3;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #C6854A;
+    }
+
     header {
       display: flex;
       flex-direction: column;
@@ -139,11 +165,12 @@
       border-radius: 10px;
       margin-bottom: 25px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .portfolio-item:hover {
       transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
 
     .resume a {
@@ -186,6 +213,15 @@
 </head>
 <body>
 
+  <!-- Navigation -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#portfolio">Portfolio</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <!-- Home / Landing -->
   <header>
     <h1>Kessie Bagro</h1>
@@ -206,54 +242,4 @@
     <p>On the other hand, I am also passionate about <strong>volunteering and corporate social responsibility (CSR)</strong>. I believe that giving back, building relationships in the community, and reaching out to those in need are just as important as professional success. In 2022, I was recognized as a <strong>Social Impact Champion</strong> for my involvement in volunteering activities — an experience that continues to inspire me to balance career growth with making a meaningful difference beyond the workplace.</p>
   </section>
 
-  <!-- Skills -->
-  <section class="skills" id="skills">
-    <h2><i class="fas fa-lightbulb"></i> Skills</h2>
-    <div>
-      <span><i class="fas fa-coins"></i> Finance</span>
-      <span><i class="fas fa-chart-line"></i> Analytics</span>
-      <span><i class="fas fa-robot"></i> AI Automation</span>
-      <span><i class="fas fa-chart-pie"></i> Data Visualization</span>
-      <span><i class="fas fa-handshake"></i> Stakeholder Management</span>
-      <span><i class="fas fa-calculator"></i> Financial Analysis</span>
-      <span><i class="fas fa-table"></i> Dashboards</span>
-      <span><i class="fas fa-sync-alt"></i> Process Improvement</span>
-      <span><i class="fas fa-file-invoice"></i> Accounting Analysis</span>
-      <span><i class="fas fa-university"></i> AP & Bank Reconciliation</span>
-      <span><i class="fas fa-broom"></i> Data Cleansing & Organization</span>
-    </div>
-  </section>
-
-  <!-- Portfolio -->
-  <section class="portfolio" id="portfolio">
-    <h2><i class="fas fa-briefcase"></i> Portfolio / Projects</h2>
-    <div class="portfolio-item">
-      <h3>Project Title</h3>
-      <p>Description of the project will go here. Tools used, outcomes, etc.</p>
-    </div>
-    <div class="portfolio-item">
-      <h3>Project Title</h3>
-      <p>Description of the project will go here. Tools used, outcomes, etc.</p>
-    </div>
-  </section>
-
-  <!-- Resume -->
-  <section class="resume" id="resume">
-    <h2><i class="fas fa-file-alt"></i> Resume / CV</h2>
-    <p>Download my detailed CV for a full view of my experience, achievements, and skills.</p>
-    <a href="resume" download>Download PDF Resume</a>
-  </section>
-
-  <!-- Contact -->
-  <section class="contact" id="contact">
-    <h2><i class="fas fa-envelope"></i> Contact</h2>
-    <p>Email: <a href="mailto:kessbagro09@gmail.com">kessbagro09@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/kessie-bagro" target="_blank">linkedin.com/in/kessie-bagro</a></p>
-  </section>
-
-  <footer>
-    &copy; 2025 Kessie Bagro. All rights reserved.
-  </footer>
-
-</body>
-</html>
+  <!-- Skills
