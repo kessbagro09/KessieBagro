@@ -239,6 +239,55 @@
       color: #C6854A;
     }
 
+    /* Certifications */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .cert-card {
+      background-color: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cert-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .cert-card h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+      color: #000000;
+    }
+
+    .cert-card p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      color: #333333;
+    }
+
+    .cert-card a {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: #C6854A;
+      color: #FFFFFF;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .cert-card a:hover {
+      background-color: #A66835;
+      transform: translateY(-2px);
+    }
+
     footer {
       text-align: center;
       padding: 40px 20px;
@@ -256,6 +305,7 @@
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
     <a href="#portfolio">Portfolio</a>
+    <a href="#certifications">Certifications</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
   </nav>
@@ -337,6 +387,31 @@
     </div>
   </section>
 
+  <!-- Professional Development & Certifications -->
+  <section class="certifications" id="certifications">
+    <h2><i class="fas fa-certificate"></i> Professional Development & Certifications</h2>
+    <div class="cert-grid">
+      <div class="cert-card">
+        <img src="certificates/sample1.png" alt="Certificate 1" style="width:60px; margin-bottom:10px;">
+        <h3>Certification Title</h3>
+        <p>Institution / Platform – Year</p>
+        <a href="certificates/sample1.pdf" target="_blank">View Certificate</a>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/sample2.png" alt="Certificate 2" style="width:60px; margin-bottom:10px;">
+        <h3>Course or Training</h3>
+        <p>Institution / Platform – Year</p>
+        <a href="certificates/sample2.pdf" target="_blank">View Certificate</a>
+      </div>
+      <div class="cert-card">
+        <img src="certificates/sample3.png" alt="Certificate 3" style="width:60px; margin-bottom:10px;">
+        <h3>Another Certification</h3>
+        <p>Institution / Platform – Year</p>
+        <a href="certificates/sample3.pdf" target="_blank">View Certificate</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Resume -->
   <section class="resume" id="resume">
     <h2><i class="fas fa-file"></i> Resume / CV</h2>
@@ -379,4 +454,3 @@
   </script>
 </body>
 </html>
-
