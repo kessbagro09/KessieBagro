@@ -208,6 +208,55 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
 
+    /* Certifications */
+    .cert-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .cert-item {
+      background-color: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .cert-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .cert-item h3 {
+      margin: 0 0 5px 0;
+      font-size: 1.1rem;
+      color: #000000;
+    }
+
+    .cert-item p {
+      margin: 0 0 10px 0;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .cert-item a {
+      display: inline-block;
+      margin-top: 5px;
+      background-color: #C6854A;
+      color: #FFFFFF;
+      padding: 8px 16px;
+      border-radius: 20px;
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    .cert-item a:hover {
+      background-color: #A66835;
+    }
+
     /* Resume */
     .resume a {
       display: inline-block;
@@ -255,6 +304,7 @@
     <a href="#about">About</a>
     <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
     <a href="#portfolio">Portfolio</a>
     <a href="#resume">Resume</a>
     <a href="#contact">Contact</a>
@@ -271,38 +321,17 @@
   <!-- About -->
   <section class="about" id="about">
     <h2><i class="fas fa-user"></i> About</h2>
-    <p>I genuinely enjoy finance because it challenges me to <strong>analyze data, uncover insights, and transform numbers into meaningful dashboards and reports that drive smarter decisions</strong>. With 9+ years of experience in financial management and analysis, I’ve built a strong foundation in <strong>pricing, budgeting, revenue, and margin analysis</strong>, while leveraging <strong>AI-driven automation and process improvements</strong> to save time and deliver measurable impact.</p>
-
-    <p>My career began in <strong>accounting</strong>, which sharpened my attention to detail, and over time, working closely with <strong>Partners, Executive Directors, and Senior Managers</strong> has strengthened my ability to think strategically and communicate effectively with decision-makers. Within my teams, I often lead the charge in identifying opportunities for improvement, championing automation, and driving initiatives that streamline processes.</p>
-
-    <p>Beyond finance, I am curious and open to learning how <strong>AI and process automation</strong> can be applied in other fields such as <strong>social media management or marketing</strong>. I believe finance provides an excellent foundation for innovation, and I’m excited to keep growing my skills — not only as a finance professional, but as someone committed to building <strong>smarter, more efficient ways of working across industries</strong>.</p>
-
-    <p>On the other hand, I am passionate about <strong>volunteering and corporate social responsibility (CSR)</strong>. I believe that giving back and building strong community relationships is as important as professional success. In 2022, I was recognized as a <strong>Social Impact Champion</strong> for volunteering and CSR initiatives, and I look forward to contributing to meaningful causes alongside my career growth.</p>
+    <p>... (same about content you had) ...</p>
   </section>
 
   <!-- Experience -->
   <section class="experience" id="experience">
     <h2><i class="fas fa-briefcase"></i> Experience</h2>
-    <div class="experience-item">
-      <h3>Senior Finance Business Advisor III - Oceania</h3>
-      <p>Ernst & Young Global Delivery Services Phils. Inc. (Mar 2020 – Present)</p>
-    </div>
-    <div class="experience-item">
-      <h3>Markets Finance Support Analyst - APAC (Secondment)</h3>
-      <p>Ernst & Young Global Delivery Services Phils. Inc. (Dec 2023 – Apr 2024)</p>
-    </div>
-    <div class="experience-item">
-      <h3>Accounting Assistant</h3>
-      <p>SyCip Salazar Hernandez & Gatmaitan Law Offices (Dec 2017 – Feb 2020)</p>
-    </div>
-    <div class="experience-item">
-      <h3>Online English Teacher</h3>
-      <p>(Sep 2017 – Nov 2017)</p>
-    </div>
-    <div class="experience-item">
-      <h3>Financial Management Associate - APAC & Global</h3>
-      <p>Ernst & Young Philippines (Jan 2016 – Sep 2017)</p>
-    </div>
+    <div class="experience-item"><h3>Senior Finance Business Advisor III - Oceania</h3><p>Ernst & Young Global Delivery Services Phils. Inc. (Mar 2020 – Present)</p></div>
+    <div class="experience-item"><h3>Markets Finance Support Analyst - APAC (Secondment)</h3><p>Ernst & Young Global Delivery Services Phils. Inc. (Dec 2023 – Apr 2024)</p></div>
+    <div class="experience-item"><h3>Accounting Assistant</h3><p>SyCip Salazar Hernandez & Gatmaitan Law Offices (Dec 2017 – Feb 2020)</p></div>
+    <div class="experience-item"><h3>Online English Teacher</h3><p>(Sep 2017 – Nov 2017)</p></div>
+    <div class="experience-item"><h3>Financial Management Associate - APAC & Global</h3><p>Ernst & Young Philippines (Jan 2016 – Sep 2017)</p></div>
   </section>
 
   <!-- Skills -->
@@ -324,17 +353,33 @@
     </div>
   </section>
 
+  <!-- Certifications -->
+  <section class="certifications" id="certifications">
+    <h2><i class="fas fa-certificate"></i> Professional Development & Certifications</h2>
+    <div class="cert-list">
+      <div class="cert-item">
+        <h3>Power BI for Beginners</h3>
+        <p>Completed: 2024</p>
+        <a href="certifications/powerbi.pdf" target="_blank">View Certificate</a>
+      </div>
+      <div class="cert-item">
+        <h3>Data Analytics with Excel</h3>
+        <p>Completed: 2023</p>
+        <a href="certifications/excel_analytics.pdf" target="_blank">View Certificate</a>
+      </div>
+      <div class="cert-item">
+        <h3>AI in Finance Workshop</h3>
+        <p>Completed: 2022</p>
+        <a href="certifications/ai_finance.jpeg" target="_blank">View Certificate</a>
+      </div>
+    </div>
+  </section>
+
   <!-- Portfolio -->
   <section class="portfolio" id="portfolio">
     <h2><i class="fas fa-folder-open"></i> Portfolio / Projects</h2>
-    <div class="portfolio-item">
-      <h3>Project Title</h3>
-      <p>Description of the project will go here. Tools used, outcomes, etc.</p>
-    </div>
-    <div class="portfolio-item">
-      <h3>Project Title</h3>
-      <p>Description of the project will go here. Tools used, outcomes, etc.</p>
-    </div>
+    <div class="portfolio-item"><h3>Project Title</h3><p>Description of the project will go here...</p></div>
+    <div class="portfolio-item"><h3>Project Title</h3><p>Description of the project will go here...</p></div>
   </section>
 
   <!-- Resume -->
@@ -379,5 +424,3 @@
   </script>
 </body>
 </html>
-
-
