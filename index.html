@@ -129,12 +129,6 @@
       font-size: 1.8rem;
     }
 
-    .about p {
-      line-height: 1.8;
-      margin-bottom: 18px;
-      font-size: 1.05rem;
-    }
-
     /* Experience */
     .experience-item {
       background-color: #FFFFFF;
@@ -150,27 +144,11 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
 
-    .experience-item h3 {
-      margin: 0 0 5px 0;
-      color: #000000;
-    }
-
-    .experience-item p {
-      margin: 5px 0 10px 0;
-      line-height: 1.6;
-    }
-
     /* Skills grid */
-    .skills {
-      margin-top: 25px;
-    }
-
     .skills div {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      grid-auto-rows: auto; 
       gap: 14px;
-      justify-items: start;
     }
 
     .skills span {
@@ -187,7 +165,6 @@
 
     .skills span i {
       color: #C6854A;
-      transition: transform 0.3s ease, color 0.3s ease;
     }
 
     .skills span:hover {
@@ -200,99 +177,42 @@
       transform: translateY(-3px);
     }
 
-    /* Portfolio */
-    .portfolio-item {
+    /* Portfolio, Cards */
+    .portfolio-item,
+    .card-box {
       background-color: #FFFFFF;
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 25px;
       box-shadow: 0 3px 8px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
     }
 
-    .portfolio-item:hover {
+    .portfolio-item:hover,
+    .card-box:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
 
-    /* Resume */
-    .resume a {
-      display: inline-block;
-      margin-top: 10px;
-      background-color: #C6854A;
-      color: #FFFFFF;
-      padding: 12px 24px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-    }
-
-    .resume a:hover {
-      background-color: #A66835;
-      transform: translateY(-2px);
-    }
-
-    /* Contact */
-    .contact a {
-      display: inline-block;
-      margin: 5px 10px;
-      color: #000000;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .contact a:hover {
-      color: #C6854A;
-    }
-
-    /* Card grid (used for Certifications & Rewards) */
     .card-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
     }
 
-    .card-box {
-      background-color: #FFFFFF;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    /* Upload input */
+    .upload-box {
+      margin-top: 20px;
       text-align: center;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .card-box:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
-    }
-
-    .card-box h3 {
-      margin: 0 0 10px;
-      font-size: 1.2rem;
-      color: #000000;
-    }
-
-    .card-box p {
-      font-size: 0.95rem;
-      margin-bottom: 15px;
-      color: #333333;
-    }
-
-    .card-box a {
-      display: inline-block;
-      padding: 10px 18px;
-      background-color: #C6854A;
-      color: #FFFFFF;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease, transform 0.2s ease;
-    }
-
-    .card-box a:hover {
-      background-color: #A66835;
-      transform: translateY(-2px);
+    .upload-box input {
+      padding: 10px;
+      border: 2px dashed #C6854A;
+      border-radius: 10px;
+      background: #fff;
+      cursor: pointer;
     }
 
     footer {
@@ -300,7 +220,6 @@
       padding: 40px 20px;
       background-color: #000000;
       color: #E7CCB3;
-      font-size: 0.95rem;
     }
   </style>
 </head>
@@ -314,12 +233,12 @@
     <a href="#portfolio"><i class="fas fa-folder-open"></i> Portfolio</a>
     <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
     <a href="#rewards"><i class="fas fa-award"></i> Rewards</a>
+    <a href="#volunteering"><i class="fas fa-hands-helping"></i> Volunteering</a>
     <a href="#resume"><i class="fas fa-file"></i> Resume</a>
-    <a href="#resume"><i class="fas fa-file"></i> Volunteering</a>
     <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
   </nav>
 
-  <!-- Home / Landing -->
+  <!-- Home -->
   <header>
     <h1>Kessie Bagro</h1>
     <p>Finance Business Analytics & Advisory | AI-Driven Process Innovator</p>
@@ -328,44 +247,24 @@
   </header>
 
   <!-- About -->
-  <section class="about" id="about">
+  <section id="about">
     <h2><i class="fas fa-user"></i> About</h2>
     <p>I genuinely enjoy finance because it challenges me to <strong>analyze data, uncover insights, and transform numbers into meaningful dashboards and reports that drive smarter decisions</strong>. With 9+ years of experience in financial management and analysis, I’ve built a strong foundation in <strong>pricing, budgeting, revenue, and margin analysis</strong>, while leveraging <strong>AI-driven automation and process improvements</strong> to save time and deliver measurable impact.</p>
-
-    <p>My career began in <strong>accounting</strong>, which sharpened my attention to detail, and over time, working closely with <strong>Partners, Executive Directors, and Senior Managers</strong> has strengthened my ability to think strategically and communicate effectively with decision-makers. Within my teams, I often lead the charge in identifying opportunities for improvement, championing automation, and driving initiatives that streamline processes.</p>
-
-    <p>Beyond finance, I am curious and open to learning how <strong>AI and process automation</strong> can be applied in other fields such as <strong>social media management or marketing</strong>. I believe finance provides an excellent foundation for innovation, and I’m excited to keep growing my skills — not only as a finance professional, but as someone committed to building <strong>smarter, more efficient ways of working across industries</strong>.</p>
-
-    <p>On the other hand, I am passionate about <strong>volunteering and corporate social responsibility (CSR)</strong>. I believe that giving back and building strong community relationships is as important as professional success. In 2022, I was recognized as a <strong>Social Impact Champion</strong> for volunteering and CSR initiatives, and I look forward to contributing to meaningful causes alongside my career growth.</p>
+    <p>Beyond finance, I am passionate about <strong>volunteering and corporate social responsibility (CSR)</strong>. In 2022, I was recognized as a <strong>Social Impact Champion</strong> for initiatives that created meaningful community impact.</p>
   </section>
 
   <!-- Experience -->
-  <section class="experience" id="experience">
+  <section id="experience">
     <h2><i class="fas fa-briefcase"></i> Experience</h2>
-    <div class="experience-item">
-      <h3>Senior Finance Business Advisor III - Oceania</h3>
-      <p>Ernst & Young Global Delivery Services Phils. Inc. (Mar 2020 – Present)</p>
-    </div>
-    <div class="experience-item">
-      <h3>Markets Finance Support Analyst - APAC (Secondment)</h3>
-      <p>Ernst & Young Global Delivery Services Phils. Inc. (Dec 2023 – Apr 2024)</p>
-    </div>
-    <div class="experience-item">
-      <h3>Accounting Assistant</h3>
-      <p>SyCip Salazar Hernandez & Gatmaitan Law Offices (Dec 2017 – Feb 2020)</p>
-    </div>
-    <div class="experience-item">
-      <h3>Online English Teacher</h3>
-      <p>(Sep 2017 – Nov 2017)</p>
-    </div>
-    <div class="experience-item">
-      <h3>Financial Management Associate - APAC & Global</h3>
-      <p>Ernst & Young Philippines (Jan 2016 – Sep 2017)</p>
-    </div>
+    <div class="experience-item"><h3>Senior Finance Business Advisor III</h3><p>EY GDS Philippines (2020–Present)</p></div>
+    <div class="experience-item"><h3>Markets Finance Support Analyst</h3><p>EY GDS APAC (2023–2024)</p></div>
+    <div class="experience-item"><h3>Accounting Assistant</h3><p>SyCip Law (2017–2020)</p></div>
+    <div class="experience-item"><h3>Online English Teacher</h3><p>Freelance (2017)</p></div>
+    <div class="experience-item"><h3>Financial Management Associate</h3><p>EY Philippines (2016–2017)</p></div>
   </section>
 
   <!-- Skills -->
-  <section class="skills" id="skills">
+  <section id="skills">
     <h2><i class="fas fa-lightbulb"></i> Skills</h2>
     <div>
       <span><i class="fas fa-chart-line"></i> Finance</span>
@@ -373,90 +272,69 @@
       <span><i class="fas fa-robot"></i> AI Automation</span>
       <span><i class="fas fa-table"></i> Data Visualization</span>
       <span><i class="fas fa-users"></i> Stakeholder Management</span>
-      <span><i class="fas fa-calculator"></i> Financial Analysis</span>
-      <span><i class="fas fa-tachometer-alt"></i> Dashboards</span>
-      <span><i class="fas fa-cogs"></i> Process Improvement</span>
-      <span><i class="fas fa-file-invoice-dollar"></i> Accounting Analysis</span>
-      <span><i class="fas fa-money-check"></i> AP & Bank Reconciliation</span>
-      <span><i class="fas fa-database"></i> Data Cleansing & Organization</span>
       <span><i class="fas fa-bolt"></i> Automation Leadership</span>
     </div>
   </section>
 
   <!-- Portfolio -->
-  <section class="portfolio" id="portfolio">
-    <h2><i class="fas fa-folder-open"></i> Portfolio / Projects</h2>
-    <div class="portfolio-item">
-      <h3>Project Title</h3>
-      <p>Description of the project will go here. Tools used, outcomes, etc.</p>
-    </div>
-    <div class="portfolio-item">
-      <h3>Project Title</h3>
-      <p>Description of the project will go here. Tools used, outcomes, etc.</p>
-    </div>
+  <section id="portfolio">
+    <h2><i class="fas fa-folder-open"></i> Portfolio</h2>
+    <div class="portfolio-item"><h3>Project 1</h3><p>Description here</p></div>
+    <div class="portfolio-item"><h3>Project 2</h3><p>Description here</p></div>
   </section>
 
-  <!-- Professional Development & Certifications -->
-  <section class="certifications" id="certifications">
-    <h2><i class="fas fa-certificate"></i> Professional Development & Certifications</h2>
+  <!-- Certifications -->
+  <section id="certifications">
+    <h2><i class="fas fa-certificate"></i> Certifications</h2>
     <div class="card-grid">
       <div class="card-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Credly_logo.png/60px-Credly_logo.png" alt="EY Digital Bronze Learning" style="width:60px; margin-bottom:10px;">
-        <h3>EY Digital - Bronze Learning (2025)</h3>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Credly_logo.png/60px-Credly_logo.png" alt="EY Digital Bronze Learning">
+        <h3>EY Digital - Bronze Learning</h3>
         <p>EY via Credly – 2025</p>
-        <a href="https://www.credly.com/org/ey/badge/ey-digital-bronze-learning-2025" target="_blank">View Certificate</a>
+        <a href="https://www.credly.com/org/ey/badge/ey-digital-bronze-learning-2025" target="_blank">View</a>
       </div>
-      <!-- Add more certs here -->
     </div>
   </section>
 
-  <!-- Rewards & Recognition -->
-  <section class="rewards" id="rewards">
-    <h2><i class="fas fa-award"></i> Rewards & Recognition</h2>
+  <!-- Rewards -->
+  <section id="rewards">
+    <h2><i class="fas fa-award"></i> Rewards</h2>
+    <div class="card-grid">
+      <div class="card-box"><h3>Social Impact Champion</h3><p>EY – 2022</p></div>
+      <div class="card-box"><h3>Excellence in Finance Advisory</h3><p>EY – 2023</p></div>
+    </div>
+  </section>
+
+  <!-- Volunteering -->
+  <section id="volunteering">
+    <h2><i class="fas fa-hands-helping"></i> Volunteering</h2>
     <div class="card-grid">
       <div class="card-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Star_icon-72a7cf.svg/60px-Star_icon-72a7cf.svg.png" alt="Award Icon" style="width:60px; margin-bottom:10px;">
-        <h3>Social Impact Champion</h3>
+        <h3>Kapwa-tayo Initiative</h3>
         <p>EY – 2022</p>
-        <p>Recognized for volunteering and CSR initiatives that created meaningful community impact.</p>
+        <p>Won Php150,000 to support a remote community at Isla Verde.</p>
       </div>
       <div class="card-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Trophy_icon.svg/60px-Trophy_icon.svg.png" alt="Award Icon" style="width:60px; margin-bottom:10px;">
-        <h3>Excellence in Finance Advisory</h3>
-        <p>EY – 2023</p>
-        <p>Awarded for delivering impactful financial insights and driving automation initiatives.</p>
+        <h3>CSR Volunteer</h3>
+        <p>SSHG – 2019</p>
+        <p>Supported PGH children’s cancer ward.</p>
       </div>
+    </div>
+    <div class="upload-box">
+      <label for="volunteer-photos"><strong>Upload Volunteering Photos:</strong></label><br>
+      <input type="file" id="volunteer-photos" multiple accept="image/*">
     </div>
   </section>
 
   <!-- Resume -->
-  <section class="resume" id="resume">
-    <h2><i class="fas fa-file"></i> Resume / CV</h2>
-    <p>Brief web summary of role, achievements, and skills.</p>
-    <a href="resume" download>Download PDF Resume</a>
-  </section>
-
-   <!-- Volunteering -->
-  <section class="rewards" id="Volunteer">
-    <h2><i class="fas fa-award"></i> Volunteering</h2>
-    <div class="card-grid">
-      <div class="card-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Star_icon-72a7cf.svg/60px-Star_icon-72a7cf.svg.png" alt="Award Icon" style="width:60px; margin-bottom:10px;">
-        <h3>Kapwa-tayo initiative</h3>
-        <p>EY – 2022</p>
-        <p>Won Php150,000 to facilitate a donation or charity at a remote community at Isla Verde.</p>
-      </div>
-      <div class="card-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Trophy_icon.svg/60px-Trophy_icon.svg.png" alt="Award Icon" style="width:60px; margin-bottom:10px;">
-        <h3> CSR Volunteer at Philippine General Hospital volunteer for children who has cancer.</h3>
-        <p>SSHG – 2019</p>
-        <p>To add more details here.</p>
-      </div>
-    </div>
+  <section id="resume">
+    <h2><i class="fas fa-file"></i> Resume</h2>
+    <p>Brief summary of skills & experience.</p>
+    <a href="resume.pdf" download>Download PDF</a>
   </section>
 
   <!-- Contact -->
-  <section class="contact" id="contact">
+  <section id="contact">
     <h2><i class="fas fa-envelope"></i> Contact</h2>
     <p>Email: <a href="mailto:kessbagro09@gmail.com">kessbagro09@gmail.com</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/kessie-bagro" target="_blank">linkedin.com/in/kessie-bagro</a></p>
@@ -466,7 +344,5 @@
   <footer>
     <p>&copy; 2025 Kessie Bagro. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
-
