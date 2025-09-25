@@ -4,7 +4,6 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kessie Bagro | Finance Business Analytics & Advisory | AI-Driven Process Innovator</title>
-  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
@@ -40,16 +39,12 @@
       gap: 6px;
     }
 
-    nav a:hover {
-      color: #C6854A;
-    }
-
+    nav a:hover { color: #C6854A; }
     nav a.active {
       color: #C6854A;
       border-bottom: 2px solid #C6854A;
       padding-bottom: 2px;
     }
-
     nav a i { color: #f5c395; }
 
     header {
@@ -115,10 +110,7 @@
 
     .card-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
 
-    .upload-box { margin-top: 15px; text-align: center; }
-    .upload-box input { padding: 10px; border: 2px dashed #C6854A; border-radius: 10px; background: #fff; cursor: pointer; }
-
-    /* Slideshow/Carousel */
+    /* Carousel */
     .slideshow-container { position: relative; margin-top: 15px; overflow: hidden; border-radius: 10px; }
     .slide { display: none; width: 100%; }
     .slide img { width: 100%; border-radius: 10px; }
@@ -197,35 +189,6 @@
     </div>
   </section>
 
-  <!-- Portfolio -->
-  <section id="portfolio">
-    <h2><i class="fas fa-folder-open"></i> Portfolio</h2>
-    <div class="portfolio-item"><h3>Project 1</h3><p>Description here</p></div>
-    <div class="portfolio-item"><h3>Project 2</h3><p>Description here</p></div>
-  </section>
-
-  <!-- Certifications -->
-  <section id="certifications">
-    <h2><i class="fas fa-certificate"></i> Certifications</h2>
-    <div class="card-grid">
-      <div class="card-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Credly_logo.png/60px-Credly_logo.png" alt="EY Digital Bronze Learning">
-        <h3>EY Digital - Bronze Learning</h3>
-        <p>EY via Credly – 2025</p>
-        <a href="https://www.credly.com/org/ey/badge/ey-digital-bronze-learning-2025" target="_blank">View</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Rewards -->
-  <section id="rewards">
-    <h2><i class="fas fa-award"></i> Rewards</h2>
-    <div class="card-grid">
-      <div class="card-box"><h3>Social Impact Champion</h3><p>EY – 2022</p></div>
-      <div class="card-box"><h3>Excellence in Finance Advisory</h3><p>EY – 2023</p></div>
-    </div>
-  </section>
-
   <!-- Volunteering -->
   <section id="volunteering">
     <h2><i class="fas fa-hands-helping"></i> Volunteering</h2>
@@ -240,12 +203,6 @@
           <span class="prev" onclick="changeSlide(-1)">&#10094;</span>
           <span class="next" onclick="changeSlide(1)">&#10095;</span>
         </div>
-
-        <!-- Upload -->
-        <div class="upload-box">
-          <label for="kapwatayo-upload"><strong>Upload Photos:</strong></label><br>
-          <input type="file" id="kapwatayo-upload" multiple accept="image/*">
-        </div>
       </div>
 
       <div class="card-box">
@@ -256,28 +213,15 @@
     </div>
   </section>
 
-  <!-- Resume -->
-  <section id="resume">
-    <h2><i class="fas fa-file"></i> Resume</h2>
-    <p>Brief summary of skills & experience.</p>
-    <a href="resume.pdf" download>Download PDF</a>
-  </section>
-
-  <!-- Contact -->
-  <section id="contact">
-    <h2><i class="fas fa-envelope"></i> Contact</h2>
-    <p>Email: <a href="mailto:kessbagro09@gmail.com">kessbagro09@gmail.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/kessie-bagro" target="_blank">linkedin.com/in/kessie-bagro</a></p>
-  </section>
-
   <footer>
     <p>&copy; 2025 Kessie Bagro. All rights reserved.</p>
   </footer>
 
   <script>
-    let kapwaImages = [];
+    // Load images automatically from repository folder
+    const kapwaImages = [];
     for (let i = 0; i <= 7; i++) {
-      kapwaImages.push(`Kapwatayo/Kapwatayo${i}.jpg`);
+      kapwaImages.push(`Kapwatayo${i}.jpg`); // adjust extension if needed
     }
 
     const slideshowContainer = document.getElementById('kapwatayo-slideshow');
@@ -312,17 +256,7 @@
     }
 
     loadCarousel(kapwaImages);
-
-    // Auto-slide every 3s
     setInterval(() => { changeSlide(1); }, 3000);
-
-    // Upload new images
-    document.getElementById('kapwatayo-upload').addEventListener('change', function(e) {
-      const files = Array.from(e.target.files);
-      const newImages = files.map(file => URL.createObjectURL(file));
-      kapwaImages = [...kapwaImages, ...newImages];
-      loadCarousel(kapwaImages);
-    });
   </script>
 </body>
 </html>
