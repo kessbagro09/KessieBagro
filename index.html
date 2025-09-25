@@ -400,26 +400,6 @@
     </div>
   </section>
 
-  <!-- Personal Blog (Hidden Section) -->
-<section id="personalBlog" style="display:none;">
-  <h2><i class="fas fa-pencil-alt"></i> Personal Blog</h2>
-  <div class="blog-content">
-    <p>Welcome to my personal hiding place! Only I can see this.</p>
-    <!-- Add more entries here -->
-  </div>
-</section>
-
-<script>
-  function unlockBlog() {
-    const password = prompt("Enter password to view your personal blog:");
-    if(password === "YourSecret123"){ // Replace with your secret
-      document.getElementById("personalBlog").style.display = "block";
-    } else {
-      alert("Incorrect password!");
-    }
-  }
-</script>
-
   <!-- Professional Development & Certifications -->
   <section class="certifications" id="certifications">
   <h2><i class="fas fa-certificate"></i> Professional Development & Certifications</h2>
@@ -585,6 +565,7 @@
 
 </body>
 </html>
+
 
 
 
