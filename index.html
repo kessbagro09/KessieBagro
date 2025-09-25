@@ -452,6 +452,47 @@
       </div>
     </div>
   </section>
+  <script>
+    // Load images automatically from repository folder
+    const kapwaImages = [];
+    for (let i = 0; i <= 7; i++) {
+      kapwaImages.push(`Kapwatayo${i}.jpg`); // adjust extension if needed
+    }
+
+    const slideshowContainer = document.getElementById('kapwatayo-slideshow');
+    let slideIndex = 0;
+
+    function showSlide(index) {
+      const slides = document.querySelectorAll('.slide');
+      if (!slides.length) return;
+      if (index >= slides.length) slideIndex = 0;
+      if (index < 0) slideIndex = slides.length - 1;
+      slides.forEach(slide => slide.style.display = 'none');
+      slides[slideIndex].style.display = 'block';
+    }
+
+    function changeSlide(n) {
+      slideIndex += n;
+      showSlide(slideIndex);
+    }
+
+    function loadCarousel(images) {
+      slideshowContainer.querySelectorAll('.slide').forEach(el => el.remove());
+      images.forEach(src => {
+        const div = document.createElement('div');
+        div.classList.add('slide');
+        const img = document.createElement('img');
+        img.src = src;
+        div.appendChild(img);
+        slideshowContainer.appendChild(div);
+      });
+      slideIndex = 0;
+      showSlide(slideIndex);
+    }
+
+    loadCarousel(kapwaImages);
+    setInterval(() => { changeSlide(1); }, 3000);
+  </script>
 
   <!-- Resume -->
   <section class="resume" id="resume">
@@ -474,4 +515,5 @@
 
 </body>
 </html>
+
 
