@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Kessie Bagro | Finance Business Analytics & Advisory | AI-Driven Process Innovator</title>
+  <!-- Font Awesome for icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <style>
     body {
@@ -12,13 +13,14 @@
       padding: 0;
       scroll-behavior: smooth;
       background-color: #E7CCB3;
-      color: #000;
+      color: #000000;
     }
 
+    /* Sticky Navigation */
     nav {
       position: sticky;
       top: 0;
-      background-color: #000;
+      background-color: #000000;
       color: #E7CCB3;
       display: flex;
       justify-content: center;
@@ -33,14 +35,10 @@
       color: #E7CCB3;
       text-decoration: none;
       font-weight: bold;
+      transition: color 0.3s ease;
       display: flex;
       align-items: center;
       gap: 6px;
-      transition: color 0.3s ease;
-    }
-
-    nav a i {
-      color: #f5c395;
     }
 
     nav a:hover {
@@ -53,13 +51,17 @@
       padding-bottom: 2px;
     }
 
+    nav a i {
+      color: #f5c395;
+    }
+
     header {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
       height: 100vh;
-      background-color: #000;
+      background-color: #000000;
       color: #E7CCB3;
       text-align: center;
       padding: 0 20px;
@@ -85,7 +87,7 @@
       border: none;
       border-radius: 30px;
       cursor: pointer;
-      color: #fff;
+      color: #FFFFFF;
       font-weight: bold;
       transition: all 0.3s ease;
       box-shadow: 0 4px 10px rgba(0,0,0,0.2);
@@ -115,11 +117,11 @@
       font-size: 2.2rem;
       margin-bottom: 35px;
       text-align: center;
+      color: #000000;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 12px;
-      color: #000;
     }
 
     section h2 i {
@@ -135,7 +137,7 @@
 
     /* Experience */
     .experience-item {
-      background-color: #fff;
+      background-color: #FFFFFF;
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 25px;
@@ -148,20 +150,31 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
 
-    .experience-item h3 { margin:0 0 5px 0; }
-    .experience-item p { margin:5px 0 10px 0; line-height:1.6; }
+    .experience-item h3 {
+      margin: 0 0 5px 0;
+      color: #000000;
+    }
 
-    /* Skills */
+    .experience-item p {
+      margin: 5px 0 10px 0;
+      line-height: 1.6;
+    }
+
+    /* Skills grid */
+    .skills {
+      margin-top: 25px;
+    }
+
     .skills div {
       display: grid;
       grid-template-columns: repeat(6, 1fr);
-      grid-auto-rows: auto;
+      grid-auto-rows: auto; 
       gap: 14px;
       justify-items: start;
     }
 
     .skills span {
-      background-color: #000;
+      background-color: #000000;
       color: #E7CCB3;
       padding: 10px 18px;
       border-radius: 25px;
@@ -179,17 +192,17 @@
 
     .skills span:hover {
       background-color: #C6854A;
-      color: #fff;
+      color: #FFFFFF;
     }
 
     .skills span:hover i {
-      color: #fff;
+      color: #FFFFFF;
       transform: translateY(-3px);
     }
 
     /* Portfolio */
     .portfolio-item {
-      background-color: #fff;
+      background-color: #FFFFFF;
       padding: 20px;
       border-radius: 10px;
       margin-bottom: 25px;
@@ -202,74 +215,12 @@
       box-shadow: 0 6px 15px rgba(0,0,0,0.15);
     }
 
-    /* Rewards as list */
-    .rewards ul {
-      list-style: disc;
-      padding-left: 25px;
-    }
-
-    .rewards li {
-      margin-bottom: 12px;
-    }
-
-    .rewards a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-    }
-
-    .rewards a:hover {
-      color: #C6854A;
-    }
-
-    /* Volunteering carousel */
-    .carousel {
-      position: relative;
-      max-width: 100%;
-      margin: auto;
-      overflow: hidden;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-    }
-
-    .carousel img {
-      width: 100%;
-      display: none;
-      border-radius: 10px;
-    }
-
-    .carousel img.active {
-      display: block;
-    }
-
-    .carousel button {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      background-color: rgba(0,0,0,0.5);
-      color: #fff;
-      border: none;
-      padding: 10px 15px;
-      cursor: pointer;
-      border-radius: 50%;
-    }
-
-    .carousel button#prev { left: 10px; }
-    .carousel button#next { right: 10px; }
-
-    footer {
-      text-align: center;
-      padding: 40px 20px;
-      background-color: #000;
-      color: #E7CCB3;
-    }
-
     /* Resume */
     .resume a {
       display: inline-block;
       margin-top: 10px;
       background-color: #C6854A;
-      color: #fff;
+      color: #FFFFFF;
       padding: 12px 24px;
       border-radius: 25px;
       text-decoration: none;
@@ -282,6 +233,75 @@
       transform: translateY(-2px);
     }
 
+    /* Contact */
+    .contact a {
+      display: inline-block;
+      margin: 5px 10px;
+      color: #000000;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .contact a:hover {
+      color: #C6854A;
+    }
+
+    /* Card grid (used for Certifications & Rewards) */
+    .card-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .card-box {
+      background-color: #FFFFFF;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+    }
+
+    .card-box h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+      color: #000000;
+    }
+
+    .card-box p {
+      font-size: 0.95rem;
+      margin-bottom: 15px;
+      color: #333333;
+    }
+
+    .card-box a {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: #C6854A;
+      color: #FFFFFF;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.2s ease;
+    }
+
+    .card-box a:hover {
+      background-color: #A66835;
+      transform: translateY(-2px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background-color: #000000;
+      color: #E7CCB3;
+      font-size: 0.95rem;
+    }
   </style>
 </head>
 <body>
@@ -294,12 +314,11 @@
     <a href="#portfolio"><i class="fas fa-folder-open"></i> Portfolio</a>
     <a href="#certifications"><i class="fas fa-certificate"></i> Certifications</a>
     <a href="#rewards"><i class="fas fa-award"></i> Rewards</a>
-    <a href="#volunteering"><i class="fas fa-hands-helping"></i> Volunteering</a>
     <a href="#resume"><i class="fas fa-file"></i> Resume</a>
     <a href="#contact"><i class="fas fa-envelope"></i> Contact</a>
   </nav>
 
-  <!-- Header -->
+  <!-- Home / Landing -->
   <header>
     <h1>Kessie Bagro</h1>
     <p>Finance Business Analytics & Advisory | AI-Driven Process Innovator</p>
@@ -310,8 +329,13 @@
   <!-- About -->
   <section class="about" id="about">
     <h2><i class="fas fa-user"></i> About</h2>
-    <p>I genuinely enjoy finance because it challenges me to <strong>analyze data, uncover insights, and transform numbers into meaningful dashboards</strong>. With 9+ years of experience, I’ve built a strong foundation in <strong>pricing, budgeting, revenue, and margin analysis</strong>.</p>
-    <p>Passionate about <strong>volunteering and CSR</strong>, recognized as a <strong>Social Impact Champion</strong> in 2022.</p>
+    <p>I genuinely enjoy finance because it challenges me to <strong>analyze data, uncover insights, and transform numbers into meaningful dashboards and reports that drive smarter decisions</strong>. With 9+ years of experience in financial management and analysis, I’ve built a strong foundation in <strong>pricing, budgeting, revenue, and margin analysis</strong>, while leveraging <strong>AI-driven automation and process improvements</strong> to save time and deliver measurable impact.</p>
+
+    <p>My career began in <strong>accounting</strong>, which sharpened my attention to detail, and over time, working closely with <strong>Partners, Executive Directors, and Senior Managers</strong> has strengthened my ability to think strategically and communicate effectively with decision-makers. Within my teams, I often lead the charge in identifying opportunities for improvement, championing automation, and driving initiatives that streamline processes.</p>
+
+    <p>Beyond finance, I am curious and open to learning how <strong>AI and process automation</strong> can be applied in other fields such as <strong>social media management or marketing</strong>. I believe finance provides an excellent foundation for innovation, and I’m excited to keep growing my skills — not only as a finance professional, but as someone committed to building <strong>smarter, more efficient ways of working across industries</strong>.</p>
+
+    <p>On the other hand, I am passionate about <strong>volunteering and corporate social responsibility (CSR)</strong>. I believe that giving back and building strong community relationships is as important as professional success. In 2022, I was recognized as a <strong>Social Impact Champion</strong> for volunteering and CSR initiatives, and I look forward to contributing to meaningful causes alongside my career growth.</p>
   </section>
 
   <!-- Experience -->
@@ -329,6 +353,14 @@
       <h3>Accounting Assistant</h3>
       <p>SyCip Salazar Hernandez & Gatmaitan Law Offices (Dec 2017 – Feb 2020)</p>
     </div>
+    <div class="experience-item">
+      <h3>Online English Teacher</h3>
+      <p>(Sep 2017 – Nov 2017)</p>
+    </div>
+    <div class="experience-item">
+      <h3>Financial Management Associate - APAC & Global</h3>
+      <p>Ernst & Young Philippines (Jan 2016 – Sep 2017)</p>
+    </div>
   </section>
 
   <!-- Skills -->
@@ -340,55 +372,59 @@
       <span><i class="fas fa-robot"></i> AI Automation</span>
       <span><i class="fas fa-table"></i> Data Visualization</span>
       <span><i class="fas fa-users"></i> Stakeholder Management</span>
+      <span><i class="fas fa-calculator"></i> Financial Analysis</span>
+      <span><i class="fas fa-tachometer-alt"></i> Dashboards</span>
+      <span><i class="fas fa-cogs"></i> Process Improvement</span>
+      <span><i class="fas fa-file-invoice-dollar"></i> Accounting Analysis</span>
+      <span><i class="fas fa-money-check"></i> AP & Bank Reconciliation</span>
+      <span><i class="fas fa-database"></i> Data Cleansing & Organization</span>
+      <span><i class="fas fa-bolt"></i> Automation Leadership</span>
     </div>
   </section>
 
   <!-- Portfolio -->
   <section class="portfolio" id="portfolio">
-    <h2><i class="fas fa-folder-open"></i> Portfolio</h2>
+    <h2><i class="fas fa-folder-open"></i> Portfolio / Projects</h2>
     <div class="portfolio-item">
-      <h3>Project 1</h3>
-      <p>Project description goes here.</p>
+      <h3>Project Title</h3>
+      <p>Description of the project will go here. Tools used, outcomes, etc.</p>
+    </div>
+    <div class="portfolio-item">
+      <h3>Project Title</h3>
+      <p>Description of the project will go here. Tools used, outcomes, etc.</p>
     </div>
   </section>
 
-  <!-- Certifications -->
+  <!-- Professional Development & Certifications -->
   <section class="certifications" id="certifications">
-    <h2><i class="fas fa-certificate"></i> Certifications</h2>
-    <div class="cert-grid">
-      <div class="cert-card">
+    <h2><i class="fas fa-certificate"></i> Professional Development & Certifications</h2>
+    <div class="card-grid">
+      <div class="card-box">
         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Credly_logo.png/60px-Credly_logo.png" alt="EY Digital Bronze Learning" style="width:60px; margin-bottom:10px;">
         <h3>EY Digital - Bronze Learning (2025)</h3>
         <p>EY via Credly – 2025</p>
-        <a href="#" target="_blank">View Certificate</a>
+        <a href="https://www.credly.com/org/ey/badge/ey-digital-bronze-learning-2025" target="_blank">View Certificate</a>
       </div>
+      <!-- Add more certs here -->
     </div>
   </section>
 
-  <!-- Rewards -->
+  <!-- Rewards & Recognition -->
   <section class="rewards" id="rewards">
-    <h2><i class="fas fa-award"></i> Rewards</h2>
-    <ul>
-      <li><a href="#" target="_blank">Social Impact Champion</a></li>
-      <li><a href="#" target="_blank">Exceptional Client Service</a></li>
-      <li><a href="#" target="_blank">Extra Miler</a></li>
-    </ul>
-  </section>
-
-  <!-- Volunteering Slideshow -->
-  <section class="volunteering" id="volunteering">
-    <h2><i class="fas fa-hands-helping"></i> Volunteering</h2>
-    <div class="carousel">
-      <img src="Kapatayo0.jpg" class="active" alt="Volunteering 0">
-      <img src="Kapatayo1.jpg" alt="Volunteering 1">
-      <img src="Kapatayo2.jpg" alt="Volunteering 2">
-      <img src="Kapatayo3.jpg" alt="Volunteering 3">
-      <img src="Kapatayo4.jpg" alt="Volunteering 4">
-      <img src="Kapatayo5.jpg" alt="Volunteering 5">
-      <img src="Kapatayo6.jpg" alt="Volunteering 6">
-      <img src="Kapatayo7.jpg" alt="Volunteering 7">
-      <button id="prev">&#10094;</button>
-      <button id="next">&#10095;</button>
+    <h2><i class="fas fa-award"></i> Rewards & Recognition</h2>
+    <div class="card-grid">
+      <div class="card-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/19/Star_icon-72a7cf.svg/60px-Star_icon-72a7cf.svg.png" alt="Award Icon" style="width:60px; margin-bottom:10px;">
+        <h3>Social Impact Champion</h3>
+        <p>EY – 2022</p>
+        <p>Recognized for volunteering and CSR initiatives that created meaningful community impact.</p>
+      </div>
+      <div class="card-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d3/Trophy_icon.svg/60px-Trophy_icon.svg.png" alt="Award Icon" style="width:60px; margin-bottom:10px;">
+        <h3>Excellence in Finance Advisory</h3>
+        <p>EY – 2023</p>
+        <p>Awarded for delivering impactful financial insights and driving automation initiatives.</p>
+      </div>
     </div>
   </section>
 
@@ -396,7 +432,7 @@
   <section class="resume" id="resume">
     <h2><i class="fas fa-file"></i> Resume / CV</h2>
     <p>Brief web summary of role, achievements, and skills.</p>
-    <a href="resume.pdf" download>Download PDF Resume</a>
+    <a href="resume" download>Download PDF Resume</a>
   </section>
 
   <!-- Contact -->
@@ -406,56 +442,10 @@
     <p>LinkedIn: <a href="https://www.linkedin.com/in/kessie-bagro" target="_blank">linkedin.com/in/kessie-bagro</a></p>
   </section>
 
+  <!-- Footer -->
   <footer>
-    &copy; 2025 Kessie Bagro. All rights reserved.
+    <p>&copy; 2025 Kessie Bagro. All rights reserved.</p>
   </footer>
-
-  <!-- Scrollspy -->
-  <script>
-    const sections = document.querySelectorAll("section");
-    const navLinks = document.querySelectorAll("nav a");
-
-    window.addEventListener("scroll", () => {
-      let current = "";
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 120;
-        if (pageYOffset >= sectionTop) current = section.getAttribute("id");
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove("active");
-        if (link.getAttribute("href") === `#${current}`) link.classList.add("active");
-      });
-    });
-  </script>
-
-  <!-- Volunteering Slideshow JS -->
-  <script>
-    let slideIndex = 0;
-    const slides = document.querySelectorAll('.carousel img');
-    const total = slides.length;
-
-    function showSlide(index) {
-      slides.forEach(slide => slide.classList.remove('active'));
-      slides[index].classList.add('active');
-    }
-
-    function nextSlide() {
-      slideIndex = (slideIndex + 1) % total;
-      showSlide(slideIndex);
-    }
-
-    function prevSlide() {
-      slideIndex = (slideIndex - 1 + total) % total;
-      showSlide(slideIndex);
-    }
-
-    document.getElementById('next').addEventListener('click', nextSlide);
-    document.getElementById('prev').addEventListener('click', prevSlide);
-
-    // Autoplay every 4 seconds
-    setInterval(nextSlide, 4000);
-  </script>
 
 </body>
 </html>
