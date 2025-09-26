@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kessie's Personal Blog</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0; padding: 0; background-color: #E7CCB3; color: #000000;
+    }
+    header {
+      background-color: #000000;
+      color: #E7CCB3;
+      padding: 20px;
+      text-align: center;
+    }
+    .blog-post {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 20px;
+      background-color: #FFFFFF;
+      border-radius: 10px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    }
+    input[type="password"] {
+      padding: 10px; width: 200px; margin-right: 10px; border-radius: 5px; border: 1px solid #ccc;
+    }
+    button {
+      padding: 10px 20px; border: none; border-radius: 5px; background-color: #C6854A; color: #fff; cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Kessie's Personal Blog</h1>
+</header>
+
+<div class="blog-post" id="blog-container" style="display:none;">
+  <h2>Welcome to my private blog</h2>
+  <p>Here you can write anything you want. It’s your private space!</p>
+</div>
+
+<div style="text-align:center; margin-top:50px;" id="password-prompt">
+  <p>Enter password to access your blog:</p>
+  <input type="password" id="blog-password" placeholder="Enter password">
+  <button onclick="checkPassword()">Enter</button>
+  <p id="error-message" style="color:red; margin-top:10px;"></p>
+</div>
+
+<script>
+  const correctPassword = "mypersonalblog"; // ← change this to your password
+
+  function checkPassword() {
+    const entered = document.getElementById('blog-password').value;
+    if(entered === correctPassword) {
+      document.getElementById('blog-container').style.display = 'block';
+      document.getElementById('password-prompt').style.display = 'none';
+    } else {
+      document.getElementById('error-message').innerText = 'Incorrect password!';
+    }
+  }
+</script>
+
+</body>
+</html>
