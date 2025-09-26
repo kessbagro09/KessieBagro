@@ -3,66 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Kessie's Personal Blog</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Personal Blog | Kessie Bagro</title>
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0; padding: 0; background-color: #E7CCB3; color: #000000;
-    }
-    header {
-      background-color: #000000;
-      color: #E7CCB3;
+      margin: 0;
       padding: 20px;
+      background-color: #E7CCB3;
+      color: #000;
+    }
+    .hidden-content {
+      display: none;
+    }
+    .login-box {
+      max-width: 400px;
+      margin: 100px auto;
+      padding: 30px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.2);
       text-align: center;
     }
-    .blog-post {
-      max-width: 800px;
-      margin: 40px auto;
-      padding: 20px;
-      background-color: #FFFFFF;
-      border-radius: 10px;
-      box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+    .login-box input {
+      width: 80%;
+      padding: 10px;
+      margin: 15px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      font-size: 1rem;
     }
-    input[type="password"] {
-      padding: 10px; width: 200px; margin-right: 10px; border-radius: 5px; border: 1px solid #ccc;
+    .login-box button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #C6854A;
+      border: none;
+      border-radius: 25px;
+      color: #fff;
+      cursor: pointer;
+      font-weight: bold;
     }
-    button {
-      padding: 10px 20px; border: none; border-radius: 5px; background-color: #C6854A; color: #fff; cursor: pointer;
+    .login-box button:hover {
+      background-color: #A66835;
     }
   </style>
 </head>
 <body>
 
-<header>
-  <h1>Kessie's Personal Blog</h1>
-</header>
+  <div class="login-box" id="login-box">
+    <h2>Enter Password to Access Blog</h2>
+    <input type="password" id="password" placeholder="Enter password">
+    <br>
+    <button onclick="checkPassword()">Enter</button>
+    <p id="error-msg" style="color:red;"></p>
+  </div>
 
-<div class="blog-post" id="blog-container" style="display:none;">
-  <h2>Welcome to my private blog</h2>
-  <p>Here you can write anything you want. It’s your private space!</p>
-</div>
+  <div class="hidden-content" id="blog-content">
+    <h1>My Personal Blog</h1>
+    <p>Welcome to my hidden space where I can write whatever I want!</p>
+    <!-- Add your blog posts here -->
+  </div>
 
-<div style="text-align:center; margin-top:50px;" id="password-prompt">
-  <p>Enter password to access your blog:</p>
-  <input type="password" id="blog-password" placeholder="Enter password">
-  <button onclick="checkPassword()">Enter</button>
-  <p id="error-message" style="color:red; margin-top:10px;"></p>
-</div>
+  <script>
+    function checkPassword() {
+      const userPassword = document.getElementById("password").value;
+      const correctPassword = "kessie123";
+      const errorMsg = document.getElementById("error-msg");
 
-<script>
-  const correctPassword = "mypersonalblog"; // ← change this to your password
-
-  function checkPassword() {
-    const entered = document.getElementById('blog-password').value;
-    if(entered === correctPassword) {
-      document.getElementById('blog-container').style.display = 'block';
-      document.getElementById('password-prompt').style.display = 'none';
-    } else {
-      document.getElementById('error-message').innerText = 'Incorrect password!';
+      if (userPassword === correctPassword) {
+        document.getElementById("login-box").style.display = "none";
+        document.getElementById("blog-content").style.display = "block";
+      } else {
+        errorMsg.textContent = "Incorrect password. Please try again!";
+      }
     }
-  }
-</script>
+  </script>
 
 </body>
 </html>
